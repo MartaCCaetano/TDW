@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h2>JavaScript</h2>
+    <input type="text" id="myInput" value="test">
+    <div id="testButton">Click</div>
+    <script>
+        const myBtn = document.querySelector('#testButton');
+        const myEle = document.querySelector('h2')
+
+        myBtn.addEventListener('click', message);
+
+
+        function message() {
+            //console.log("chegou à função");
+            let temp = document.getElementById('myInput');
+            //console.dir(temp.value);
+            output(temp.value);
+        }
+
+        function output(mess) {
+            myEle.innerHTML = mess;
+        }
+
+    </script>
+</body>
+
+</html>
