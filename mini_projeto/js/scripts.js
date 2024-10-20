@@ -124,7 +124,7 @@ const cards = document.getElementById('characters');
 function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
 
     return `<div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="imgs/charcter.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p id="classname" class="card-text"><b>Class Name: </b>${classCharacter}</p>
                         <p id="proficiencies" class="card-text"><b>Proficiency: </b>${proficiencies}</p>
