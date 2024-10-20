@@ -90,6 +90,7 @@ let allclasses = [];
 
 let nrMax = 4
 let nrMin = 0
+let flag = 1;
 
 const createCharacters = document.getElementById("randombtn");
 createCharacters.addEventListener("click", randomizeCharacters);
@@ -117,7 +118,7 @@ fetch(urlall).then(function (res) {
             
 const cards = document.getElementById('characters');
 
-let flag = 1;
+
 
 function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
 if(flag<=3){
