@@ -138,7 +138,7 @@ for(let i = 0; i<3; i++){
                         <p id="classname" class="card-text">${classCharacter}</p>
                         <p id="proficiencies" class="card-text">${proficiencies}</p>
                         <p id="equipment" class="card-text">${equipment}</p>
-                        <p id=" " class="card-text">${subclasses}</p>
+                        <p id=" " class="card-text">${subClasses}</p>
                     </div>`; 
     }
 }
