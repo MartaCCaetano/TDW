@@ -106,7 +106,7 @@ fetch(urlall).then(function (res) {
                 });
 
                 //Variável positions para identificar urls das classes que quero usar
-                let positions = [0, 1, 4, 8];
+                let positions = [0, 1, 5, 8];
 
                 //Guarda na variável "classesurl" o url da classe na posição random do allClasses
                 let classesurl = allclasses[positions[random]];
