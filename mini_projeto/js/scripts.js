@@ -94,6 +94,8 @@ let nrMin = 0
 //Utilizado para depois escolher uma posição random do "positions"
 let random = Math.floor(Math.random() * (nrMax - nrMin));
 
+const createCharacetr = document.getElementById("randombtn");
+
 fetch(urlall).then(function (res) {
                 return res.json();
             }).then(function (data) {
@@ -126,13 +128,13 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
 
 
 
-                    const createCharacetr = document.getElementById("randombtn");
-createCharacetr.addEventListener('click', buildCharacter);
+                    
+                    createCharacetr.addEventListener('click', buildCharacter);
 
-const elclass = document.getElementById("classname");
-const elprof = document.getElementById("proficiencies");
-const elequi = document.getElementById("equipment");
-const elsubclass = document.getElementById("subclass");
+                    const elclass = document.getElementById("classname");
+                    const elprof = document.getElementById("proficiencies");
+                    const elequi = document.getElementById("equipment");
+                    const elsubclass = document.getElementById("subclass");
 
 function buildCharacter(){
     elclass.innerHTML="Class Name: " + classCharacter;
