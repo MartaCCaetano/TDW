@@ -114,6 +114,19 @@ fetch(urlall).then(function (res) {
             
 const cards = document.getElementById('characters');
 
+function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
+for(let i = 0; i<3; i++){
+    return `<div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p id="classname" class="card-text">${classCharacter}</p>
+                        <p id="proficiencies" class="card-text">${proficiencies}</p>
+                        <p id="equipment" class="card-text">${equipment}</p>
+                        <p id=" " class="card-text">${subClasses}</p>
+                    </div>`; 
+    }
+}
+
 fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                 return res.json();
             }).then(function (data) {
@@ -128,20 +141,6 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
 
                     console.log(classCharacter);
 
-
-
-function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
-for(let i = 0; i<3; i++){
-    return `<div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p id="classname" class="card-text">${classCharacter}</p>
-                        <p id="proficiencies" class="card-text">${proficiencies}</p>
-                        <p id="equipment" class="card-text">${equipment}</p>
-                        <p id=" " class="card-text">${subClasses}</p>
-                    </div>`; 
-    }
-}
                 
             }).catch(function (error) {
                 console.log(error);
