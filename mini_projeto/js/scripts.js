@@ -91,13 +91,14 @@ let allclasses = [];
 let nrMax = 4
 let nrMin = 0
 
-//Utilizado para depois escolher uma posição random do "positions"
-let random = Math.floor(Math.random() * (nrMax - nrMin));
-
 const createCharacters = document.getElementById("randombtn");
 createCharacters.addEventListener("click", randomizeCharacters);
 
 function randomizeCharacters(){
+
+    //Utilizado para depois escolher uma posição random do "positions"
+    let random = Math.floor(Math.random() * (nrMax - nrMin));
+
 fetch(urlall).then(function (res) {
                 return res.json();
             }).then(function (data) {
