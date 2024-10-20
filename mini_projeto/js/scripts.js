@@ -130,8 +130,7 @@ function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
                         <p id="proficiencies" class="card-text"><b>Proficiency: </b>${proficiencies}</p>
                         <p id="equipment" class="card-text"><b>Equipment: </b>${equipment}</p>
                         <p id=" " class="card-text"><b>SubClass: </b>${subClasses}</p>
-                    </div>
-                    <br>`; 
+                    </div>`; 
 }
 
 fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
