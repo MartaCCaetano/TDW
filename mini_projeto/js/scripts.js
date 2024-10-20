@@ -135,13 +135,13 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
             //console.log(allclasses);
           
 
-const createCharacetr = document.getElementById(randombtn);
+const createCharacetr = document.getElementById("randombtn");
 createCharacetr.addEventListener('click', buildCharacter);
 
-const elclass = document.getElementById(classname);
-const elprof = document.getElementById(proficiencies);
-const elequi = document.getElementById(equipment);
-const elsubclass = document.getElementById(subclass);
+const elclass = document.getElementById("classname");
+const elprof = document.getElementById("proficiencies");
+const elequi = document.getElementById("equipment");
+const elsubclass = document.getElementById("subclass");
 
 function buildCharacter(){
     elclass.innerHTML="Class Name: " + classCharacter;
