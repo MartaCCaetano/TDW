@@ -117,8 +117,11 @@ fetch(urlall).then(function (res) {
             
 const cards = document.getElementById('characters');
 
+let flag = 1;
+
 function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
-for(let i = 0; i<3; i++){
+if(flag<=3){
+    flag++
     return `<div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -127,6 +130,8 @@ for(let i = 0; i<3; i++){
                         <p id="equipment" class="card-text"><b>Equipment: </b>${equipment}</p>
                         <p id=" " class="card-text"><b>SubClass: </b>${subClasses}</p>
                     </div>`; 
+
+                    
     }
 }
 
