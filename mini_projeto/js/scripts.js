@@ -112,7 +112,7 @@ fetch(urlall).then(function (res) {
                 let classesurl = allclasses[positions[random]];
                 //console.log(classesurl);
             
-
+const cards = document.getElementById('characters');
 
 fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                 return res.json();
@@ -122,22 +122,25 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                     let proficiencies = data.proficiencies.name;
                     let equipment = data.starting_equipment.name;
                     let subClasses = data.subclasses.name;
+
+                    cards.innerHTML += buildCharacter(classCharacter, proficiencies, equipment, subClasses);
                    // let spellCasting = data.spellcasting.spellcasting_ability.name;
 
                     console.log(classCharacter);
-                    
-                    createCharacetr.addEventListener('click', buildCharacter);
 
-                    const elclass = document.getElementById("classname");
-                    const elprof = document.getElementById("proficiencies");
-                    const elequi = document.getElementById("equipment");
-                    const elsubclass = document.getElementById("subclass");
 
-function buildCharacter(){
-    elclass.innerHTML="Class Name: " + classCharacter;
-    elprof.innerHTML="Proficiencies: " + proficiencies;
-    elequi.innerHTML="Equipment: " + equipment;
-    elsubclass.innerHTML="SubClasses: " + subClasses;
+
+function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
+for(let i = 0; i<3; i++){
+    return `<div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p id="classname" class="card-text">${classCharacter}</p>
+                        <p id="proficiencies" class="card-text">${proficiencies}</p>
+                        <p id="equipment" class="card-text">${equipment}</p>
+                        <p id=" " class="card-text">${subclasses}</p>
+                    </div>`; 
+    }
 }
                 
             }).catch(function (error) {
