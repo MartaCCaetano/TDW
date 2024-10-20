@@ -119,10 +119,10 @@ for(let i = 0; i<3; i++){
     return `<div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p id="classname" class="card-text">${classCharacter}</p>
-                        <p id="proficiencies" class="card-text">${proficiencies}</p>
-                        <p id="equipment" class="card-text">${equipment}</p>
-                        <p id=" " class="card-text">${subClasses}</p>
+                        <p id="classname" class="card-text"><b>Class Name: </b>${classCharacter}</p>
+                        <p id="proficiencies" class="card-text"><b>Proficiency: </b>${proficiencies}</p>
+                        <p id="equipment" class="card-text"><b>Equipment: </b>${equipment}</p>
+                        <p id=" " class="card-text"><b>SubClass: </b>${subClasses}</p>
                     </div>`; 
     }
 }
@@ -132,9 +132,9 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
             }).then(function (data) {
                 //console.log(data);
                     let classCharacter = data.name;
-                    let proficiencies = data.proficiencies.name;
-                    let equipment = data.starting_equipment.name;
-                    let subClasses = data.subclasses.name;
+                    let proficiencies = data.proficiencies[0].name + "/" + data.proficiencies[1].name + "/" + data.proficiencies[2].name;
+                    let equipment = data.starting_equipment[0].name + "/" + data.starting_equipment[1].name;
+                    let subClasses = data.subclasses[0].name;
 
                     cards.innerHTML += buildCharacter(classCharacter, proficiencies, equipment, subClasses);
                    // let spellCasting = data.spellcasting.spellcasting_ability.name;
