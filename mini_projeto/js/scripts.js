@@ -96,7 +96,8 @@ const createCharacters = document.getElementById("randombtn");
 createCharacters.addEventListener("click", randomizeCharacters);
 
 function randomizeCharacters(){
-
+if(flag<=3){
+    flag++
     //Utilizado para depois escolher uma posição random do "positions"
     let random = Math.floor(Math.random() * (nrMax - nrMin));
 
@@ -121,8 +122,7 @@ const cards = document.getElementById('characters');
 
 
 function buildCharacter(classCharacter, proficiencies, equipment, subClasses){
-if(flag<=3){
-    flag++
+
     return `<div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -131,9 +131,6 @@ if(flag<=3){
                         <p id="equipment" class="card-text"><b>Equipment: </b>${equipment}</p>
                         <p id=" " class="card-text"><b>SubClass: </b>${subClasses}</p>
                     </div>`; 
-
-                    
-    }
 }
 
 fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
@@ -161,7 +158,7 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                 console.log(error);
             });
             //console.log(allclasses);
-          
+        }    
 
 }
 
