@@ -112,7 +112,7 @@ fetch(urlall).then(function (res) {
             
 
 
-fetch("https://www.dnd5eapi.co/api/classes/rogue").then(function (res) {
+fetch("https://www.dnd5eapi.co/"+classesurl).then(function (res) {
                 return res.json();
             }).then(function (data) {
                 //console.log(data);
