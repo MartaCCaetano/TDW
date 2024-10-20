@@ -125,8 +125,7 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                    // let spellCasting = data.spellcasting.spellcasting_ability.name;
 
                     console.log(classCharacter);
-
-                    if (window.location.pathname.includes('characters.html')){
+                    
                     createCharacetr.addEventListener('click', buildCharacter);
 
                     const elclass = document.getElementById("classname");
@@ -139,7 +138,7 @@ function buildCharacter(){
     elprof.innerHTML="Proficiencies: " + proficiencies;
     elequi.innerHTML="Equipment: " + equipment;
     elsubclass.innerHTML="SubClasses: " + subClasses;
-}}
+}
                 
             }).catch(function (error) {
                 console.log(error);
