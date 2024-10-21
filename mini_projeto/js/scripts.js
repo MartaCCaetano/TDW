@@ -120,7 +120,7 @@ fetch(urlall).then(function (res) {
 const cards = document.getElementById('characters');
 
 function buildCharacter(classCharacter, proficiencies, equipment, subClasses) {
-    return `<div class="card col-md-3 mb-3">
+    return `<div class="card col-md-3 mx-2 mb-3">
                 <img src="imgs/character.png" class="card-img-top col-md-3 mb-3" alt="...">
                 <div class="card-body">
                     <p id="classname" class="card-text"><b>Class Name: </b>${classCharacter}</p>
@@ -128,9 +128,9 @@ function buildCharacter(classCharacter, proficiencies, equipment, subClasses) {
                     <p id="equipment" class="card-text"><b>Equipment: </b>${equipment}</p>
                     <p id="subclass" class="card-text"><b>SubClass: </b>${subClasses}</p>
                 </div>
-            </div>
-            <br>`;
+            </div>`;
 }
+
 
 
 fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
