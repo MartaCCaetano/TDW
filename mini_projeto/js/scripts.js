@@ -149,11 +149,11 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                     console.log(data.starting_equipment.length);
                     /*if(random != 4 && data.starting_equipment.length == 1){
                         console.log("We in");
-                        equipment = data.starting_equipment[0].equipment.name; //bruh
+                        equipment = data.starting_equipment[0].equipment.name;
                     } else*/ if(random!=4){
                         console.log("I shit");
-                        for(let cnt=0; cnt<data.starting_equipment.length;i++){
-                            if(i!=data.starting_equipment.length - 1){
+                        for(let cnt=0; cnt<data.starting_equipment.length;cnt++){
+                            if(cnt!=data.starting_equipment.length - 1){
                             equipment=data.starting_equipment[cnt].equipment.name + "/";
                             }
                             else{
