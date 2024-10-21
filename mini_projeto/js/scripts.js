@@ -121,7 +121,7 @@ fetch(urlall).then(function (res) {
 
                 //Guarda na variável "classesurl" o url da classe na posição random do allClasses
                 let classesurl = allclasses[random];
-                //console.log(classesurl);
+                console.log(classesurl);
                 //console.log(random);
             
 const cards = document.getElementById('characters');
@@ -144,36 +144,23 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
             }).then(function (data) {
                 //console.log(data);
                     let classCharacter = data.name;
-                    let proficiencies;
-
-                    //Percorrer array de proficiencies para adicionar a quantidade variável de cada class
-                    for (let cnt=0; cnt<data.proficiencies.length; cnt++){
-                        if(cnt!=data.proficiencies.length - 1){
-                            proficiencies += data.proficiencies[cnt].name + "/";
-                        }
-                        else {
-                            proficiencies += data.proficiencies[cnt].name;
-                        }
-                    }
-
+                    let proficiencies = data.proficiencies[0].name + "/" + data.proficiencies[1].name + "/" + data.proficiencies[2].name;
                     let equipment = "No equipment"; //default
                     //console.log(data.starting_equipment.length);
-                    
-                    //Verifica se calha a class com o número 4
                     if(random!=4){
-                        equipment = ""; //Define valor de equipment
-                        //Percorrer array de equipment para adicionar a quantidade variável de cada class
-                        for(let cnt=0; cnt<data.starting_equipment.length; cnt++){
+                        equipment = "";
+                        //Percorrer o array de equipment e adicionar conteúdo que existe
+                        for(let cnt=0; cnt<data.starting_equipment.length;cnt++){
                             //console.log(cnt);
+                            //Retira a "/" no final do texto
                             if(cnt!=data.starting_equipment.length - 1){
-                            equipment += data.starting_equipment[cnt].equipment.name + "/";
+                            equipment+=data.starting_equipment[cnt].equipment.name + "/";
                             }
                             else{
-                            equipment += data.starting_equipment[cnt].equipment.name;
+                            equipment+=data.starting_equipment[cnt].equipment.name;
                             }
                         }
                     }
-
                     subClasses = data.subclasses[0].name;
 
                     cards.innerHTML += buildCharacter(classCharacter, proficiencies, equipment, subClasses);
