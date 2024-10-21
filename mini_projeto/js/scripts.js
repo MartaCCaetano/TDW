@@ -133,6 +133,7 @@ function buildCharacter(classCharacter, proficiencies, equipment, subClasses) {
 
 
 
+
 fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                 return res.json();
             }).then(function (data) {
