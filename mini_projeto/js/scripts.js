@@ -147,7 +147,7 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                 //console.log(data);
                     let classCharacter = data.name;
                     let proficiencies = data.proficiencies[0].name + "/" + data.proficiencies[1].name + "/" + data.proficiencies[2].name;
-                    let equipment = data.starting_equipment[0].equipment.name
+                    let equipment = data.starting_equipment[0].equipment.name;
                     let subClasses = data.subclasses[0].name;
 
                     cards.innerHTML += buildCharacter(classCharacter, proficiencies, equipment, subClasses);
