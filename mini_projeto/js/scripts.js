@@ -148,7 +148,7 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
 
                     //Percorrer array de proficiencies para adicionar a quantidade variável de cada class
                     for (let cnt=0; cnt<data.proficiencies.length; cnt++){
-                        if(cnt!=data.length.length - 1){
+                        if(cnt!=data.proficiencies.length - 1){
                             proficiencies += data.proficiencies[cnt].name + "/";
                         }
                         else {
