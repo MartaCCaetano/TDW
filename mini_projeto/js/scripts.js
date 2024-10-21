@@ -93,6 +93,7 @@ let nrMin = 0
 let countcards = 1;
 //Array para gardar as classes que já foram utilizadas
 let usedClasses = [];
+
 const createCharacters = document.getElementById("randombtn");
 createCharacters.addEventListener("click", randomizeCharacters);
 
@@ -146,7 +147,7 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                 //console.log(data);
                     let classCharacter = data.name;
                     let proficiencies = data.proficiencies[0].name + "/" + data.proficiencies[1].name + "/" + data.proficiencies[2].name;
-                    let equipment = data.starting_equipment[0].equipment.name + "/" + data.starting_equipment[1].equipment.name;
+                    let equipment = data.starting_equipment[0].equipment.name
                     let subClasses = data.subclasses[0].name;
 
                     cards.innerHTML += buildCharacter(classCharacter, proficiencies, equipment, subClasses);
