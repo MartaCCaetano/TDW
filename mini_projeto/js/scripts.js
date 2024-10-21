@@ -119,12 +119,10 @@ fetch(urlall).then(function (res) {
                     allclasses.push(classes.url);
                 });
 
-                //Array positions para identificar urls das classes que quero usar
-                let positions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
                 //Guarda na variável "classesurl" o url da classe na posição random do allClasses
-                let classesurl = allclasses[positions[random]];
+                let classesurl = allclasses[random];
                 console.log(classesurl);
+                console.log(random);
             
 const cards = document.getElementById('characters');
 
