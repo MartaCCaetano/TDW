@@ -91,7 +91,8 @@ let allclasses = [];
 let nrMax = 12
 let nrMin = 0
 let countcards = 1;
-
+//Array para gardar as classes que já foram utilizadas
+let usedClasses = [];
 const createCharacters = document.getElementById("randombtn");
 createCharacters.addEventListener("click", randomizeCharacters);
 
@@ -99,7 +100,14 @@ function randomizeCharacters(){
 if(countcards <= 3){
     countcards++
     //Utilizado para depois escolher uma posição random do "positions"
-    let random = Math.floor(Math.random() * (nrMax - nrMin));
+    let random;
+    do{ 
+        random = Math.floor(Math.random() * (nrMax - nrMin));
+      //Verifica se uma classe já foi utilizada  
+    } while(usedClasses.includes(random));
+
+    //Adiciona a class utilizada no final da lista de classes utilizadas
+    usedClasses.push(random);
 
 fetch(urlall).then(function (res) {
                 return res.json();
