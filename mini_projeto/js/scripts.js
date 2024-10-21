@@ -146,6 +146,7 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                     let classCharacter = data.name;
                     let proficiencies = data.proficiencies[0].name + "/" + data.proficiencies[1].name + "/" + data.proficiencies[2].name;
                     let equipment = "No equipment";
+                    console.log(data.starting_equipment.length);
                     if(random != 4){
                         console.log("We in");
                         equipment = data.starting_equipment[0].equipment.name;
