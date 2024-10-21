@@ -147,12 +147,20 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                     let proficiencies = data.proficiencies[0].name + "/" + data.proficiencies[1].name + "/" + data.proficiencies[2].name;
                     let equipment = "No equipment";
                     console.log(data.starting_equipment.length);
-                    if(random != 4 && data.starting_equipment.length == 1){
+                    /*if(random != 4 && data.starting_equipment.length == 1){
                         console.log("We in");
                         equipment = data.starting_equipment[0].equipment.name;
-                    } else if(data.starting_equipment.length >1){
-                        console.log("I have too much shit");
-                        equipment = data.starting_equipment[0].equipment.name + "/" + data.starting_equipment[1].equipment.name;
+                    } else*/ if(random!=4){
+                        console.log("I shit");
+                        for(let cnt=0; cnt<data.starting_equipment.length;i++){
+                            if(i!=data.starting_equipment.length - 1){
+                            equipment=data.starting_equipment[i].equipment.name + "/";
+                            }
+                            else{
+                            equipment=data.starting_equipment[i].equipment.name;
+                            }
+                        }
+                        //equipment = data.starting_equipment[0].equipment.name + "/" + data.starting_equipment[1].equipment.name;
                     }
                     subClasses = data.subclasses[0].name;
 
