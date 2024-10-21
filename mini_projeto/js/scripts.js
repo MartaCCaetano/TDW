@@ -128,7 +128,8 @@ function buildCharacter(classCharacter, proficiencies, equipment, subClasses) {
                     <p id="equipment" class="card-text"><b>Equipment: </b>${equipment}</p>
                     <p id="subclass" class="card-text"><b>SubClass: </b>${subClasses}</p>
                 </div>
-            </div>`;
+            </div>
+            <br>`;
 }
 
 
