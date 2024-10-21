@@ -119,6 +119,7 @@ fetch(urlall).then(function (res) {
             
 const cards = document.getElementById('characters');
 
+//Criar Cards com as informações dos personagens aleatórios
 function buildCharacter(classCharacter, proficiencies, equipment, subClasses) {
     return `<div class="card col-md-3 mx-2 mb-3">
                 <img src="imgs/character.png" class="card-img-top col-md-3 mb-3" alt="...">
@@ -131,9 +132,6 @@ function buildCharacter(classCharacter, proficiencies, equipment, subClasses) {
             </div>`;
 }
 
-
-
-
 fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                 return res.json();
             }).then(function (data) {
@@ -144,7 +142,6 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                     let subClasses = data.subclasses[0].name;
 
                     cards.innerHTML += buildCharacter(classCharacter, proficiencies, equipment, subClasses);
-                   // let spellCasting = data.spellcasting.spellcasting_ability.name;
 
                     console.log(classCharacter);
 
