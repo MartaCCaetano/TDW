@@ -155,10 +155,10 @@ fetch("https://www.dnd5eapi.co"+classesurl).then(function (res) {
                         for(let cnt=0; cnt<data.starting_equipment.length;cnt++){
                             console.log(cnt);
                             if(cnt!=data.starting_equipment.length - 1){
-                            equipment=data.starting_equipment[cnt].equipment.name + "/";
+                            equipment+=data.starting_equipment[cnt].equipment.name + "/";
                             }
                             else{
-                            equipment=data.starting_equipment[cnt].equipment.name;
+                            equipment+=data.starting_equipment[cnt].equipment.name;
                             }
                         }
                         //equipment = data.starting_equipment[0].equipment.name + "/" + data.starting_equipment[1].equipment.name;
