@@ -88,7 +88,7 @@ const urlall = "https://www.dnd5eapi.co/api/classes";
 //Array para guardar os url das classes
 let allclasses = [];
 
-let nrMax = 4
+let nrMax = 12
 let nrMin = 0
 let countcards = 1;
 
@@ -110,8 +110,8 @@ fetch(urlall).then(function (res) {
                     allclasses.push(classes.url);
                 });
 
-                //Variável positions para identificar urls das classes que quero usar
-                let positions = [0, 1, 5, 8];
+                //Array positions para identificar urls das classes que quero usar
+                let positions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
                 //Guarda na variável "classesurl" o url da classe na posição random do allClasses
                 let classesurl = allclasses[positions[random]];
