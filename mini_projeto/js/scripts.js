@@ -90,14 +90,13 @@ let allclasses = [];
 
 let nrMax = 12
 let nrMin = 0
-let countcards = 1;
 
 const createCharacters = document.getElementById("randombtn");
 createCharacters.addEventListener("click", randomizeCharacters);
 
 function randomizeCharacters(){
-if(countcards <= 3){
-    countcards++
+for(let countcards = 1; countcards <= 3; countcards++){
+    
     //Utilizado para depois escolher uma posição random do "positions"
     let random = Math.floor(Math.random() * (nrMax - nrMin));
 
