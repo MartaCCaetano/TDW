@@ -100,7 +100,7 @@ createCharacters.addEventListener("click", randomizeCharacters);
 function randomizeCharacters(){
 if(countcards <= 3){
     countcards++
-    //Utilizado para depois escolher uma posição random
+    //Utilizado para depois escolher uma posição random dos urls
     let random;
     do{ 
         random = Math.floor(Math.random() * (nrMax - nrMin));
