@@ -121,7 +121,7 @@ fetch(urlall).then(function (res) {
 
                 //Guarda na variável "classesurl" o url da classe na posição random do allClasses
                 let classesurl = allclasses[random];
-                console.log(classesurl);
+                //console.log(classesurl);
                 //console.log(random);
             
 const cards = document.getElementById('characters');
