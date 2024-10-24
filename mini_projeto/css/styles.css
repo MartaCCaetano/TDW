@@ -92,6 +92,7 @@
 }
 
 body {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../imgs/fundo.png");
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
@@ -11014,7 +11015,6 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../imgs/fundo.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11107,4 +11107,49 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Ajusta o fundo do header para cobrir a área */
+header.masthead {
+  position: relative;
+  height: 100vh;
+  /* Define a altura do cabeçalho para ocupar a tela toda */
+
+  /* Insira o caminho da sua imagem de background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Coloca os cards acima do fundo */
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+      display: flex;
+      flex-wrap: wrap;
+      /* Para permitir que os cards se movam para a próxima linha */
+      align-items: stretch;
+      /* Para esticar todos os cards para a mesma altura */
+    
+}  
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Ajuste o espaço e o layout do texto no header */
+.masthead h1,
+.masthead h3 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
